@@ -5,76 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Lumio</title>
     <style>
-        body { background-color: #0a0a0a; color: #a1a1aa; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-        h1, h2 { color: #ffffff; margin-top: 40px; }
-        h1 { font-size: 2.5rem; letter-spacing: -1px; }
-        h2 { font-size: 1.5rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        p, li { font-size: 1rem; margin-bottom: 15px; }
-        a { color: #ffffff; text-decoration: none; border-bottom: 1px solid #555; transition: border-color 0.2s; }
+        body { background-color: #000000; color: #a1a1aa; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 40px 20px; max-width: 800px; margin: 0 auto; letter-spacing: -0.01em; }
+        h1, h2 { color: #f5f5f7; margin-top: 40px; font-weight: 600; }
+        h1 { font-size: 2.5rem; letter-spacing: -0.03em; }
+        h2 { font-size: 1.5rem; border-bottom: 1px solid #333336; padding-bottom: 10px; }
+        p, li { font-size: 1rem; margin-bottom: 15px; color: #86868b; }
+        a { color: #f5f5f7; text-decoration: none; border-bottom: 1px solid #555; transition: border-color 0.2s; }
         a:hover { border-bottom-color: #fff; }
-        .back-btn { display: inline-block; margin-bottom: 30px; border: 1px solid #333; padding: 8px 16px; border-radius: 8px; transition: background 0.2s; border-bottom: none; }
-        .back-btn:hover { background: #333; }
-        strong { color: #ddd; }
+        .back-btn { display: inline-block; margin-bottom: 30px; border: 1px solid #333336; padding: 8px 16px; border-radius: 980px; transition: background 0.2s; border-bottom: none; font-size: 14px; }
+        .back-btn:hover { background: #333336; }
+        strong { color: #d2d2d7; }
     </style>
 </head>
 <body>
     <a href="index.html" class="back-btn">&larr; Back to Home</a>
     
     <h1>Privacy Policy</h1>
-    <p><strong>Last Updated and Effective Date:</strong> March 2026</p>
+    <p><strong>Effective Date:</strong> March 2026</p>
 
     <h2>1. Introduction</h2>
-    <p>Welcome to Lumio ("we," "our," or "us"). We are deeply committed to protecting your privacy and ensuring the security of your personal data. This comprehensive Privacy Policy governs the manner in which Lumio collects, uses, maintains, and discloses information collected from users of the Lumio mobile application. By using Lumio, you consent to the data practices described in this statement.</p>
+    <p>Welcome to Lumio. Protecting your privacy is our top priority. This Privacy Policy details how we collect, use, and protect your information, ensuring full compliance with Apple's App Store Review Guidelines regarding user data.</p>
 
-    <h2>2. Information We Collect</h2>
-    <p>To provide our core services, we collect the following categories of information:</p>
+    <h2>2. Data Collection and Usage</h2>
+    <p>We collect minimal data required to provide our journaling and AI analysis services:</p>
     <ul>
-        <li><strong>Personal Identifiable Information (PII):</strong> Email addresses and unique user identifiers obtained through Firebase Authentication or Apple Sign-In. We do not require your real name.</li>
-        <li><strong>User-Generated Content:</strong> The text of your journal entries, selected moods, and related emotional metadata.</li>
-        <li><strong>Usage Data:</strong> Information about how you interact with the app, such as session duration, feature usage (e.g., AI Insights accessed), and crash reports to improve app stability.</li>
-        <li><strong>Financial Information:</strong> We do not collect or store your credit card details. All subscription transactions are securely processed by Apple App Store and tracked via RevenueCat using anonymized app-user IDs.</li>
+        <li><strong>Account Information:</strong> We use Firebase Authentication and Apple Sign-In. We collect your email address solely for account creation and recovery.</li>
+        <li><strong>Journal Entries:</strong> The text and mood data you input are processed to generate AI insights.</li>
+        <li><strong>No Advertising Tracking:</strong> We do not track you across other apps or websites. We do not sell, rent, or share your personal data with third-party advertisers or data brokers.</li>
+        <li><strong>Health Data:</strong> Lumio does not integrate with Apple HealthKit and does not read or write any medical data to the Apple Health app.</li>
     </ul>
 
-    <h2>3. How We Process Data with Artificial Intelligence</h2>
-    <p>Lumio utilizes Google's Firebase Vertex AI to analyze your journal entries and generate insights, cognitive distortion detections, and reframing exercises. Please note:</p>
+    <h2>3. Artificial Intelligence (AI) Processing</h2>
+    <p>Lumio utilizes Google Firebase Vertex AI. Your journal entries are transmitted securely for real-time processing to generate reframes and insights. <strong>Your private entries are never used to train public AI models.</strong> The processing is automated and strictly confidential.</p>
+
+    <h2>4. Third-Party Integrations</h2>
+    <p>To operate the app, we use:</p>
     <ul>
-        <li>Your text inputs are transmitted securely to our AI provider strictly for generating real-time insights within your app session.</li>
-        <li><strong>No Public Training:</strong> We do not use your personal journal entries to train public foundational AI models.</li>
-        <li>The AI processing is automated, and no human reads your private journal entries.</li>
+        <li><strong>RevenueCat & Apple App Store:</strong> To securely process subscriptions. We never see or store your credit card information.</li>
+        <li><strong>Google Cloud (Firestore):</strong> To securely store your journal entries using industry-standard encryption.</li>
     </ul>
 
-    <h2>4. Third-Party Service Providers</h2>
-    <p>We share necessary information with trusted third-party services exclusively to operate our application:</p>
-    <ul>
-        <li><strong>Google Firebase & Firestore:</strong> For secure cloud database storage and user authentication.</li>
-        <li><strong>RevenueCat:</strong> For managing premium subscriptions and entitlement verification.</li>
-        <li><strong>Apple:</strong> For processing payments and Apple Sign-In authentication.</li>
-    </ul>
-    <p>These third parties are bound by strict data processing agreements and are prohibited from using your personal data for their own marketing purposes.</p>
+    <h2>5. Data Deletion and User Rights</h2>
+    <p>You have the absolute right to control your data. By using the "Delete Account" button within the Lumio app settings, you can instantly and permanently erase all your journal entries, insights, and account data from our servers. Note that deleting the app does not automatically cancel your App Store subscription; this must be managed in your Apple ID settings.</p>
 
-    <h2>5. Data Retention and Deletion</h2>
-    <p>We retain your data only for as long as your account is active. You have the absolute right to delete your data. By using the "Delete Account" feature within the Lumio app settings, the following actions are triggered immediately:</p>
-    <ul>
-        <li>All your journal entries, AI-generated insights, and monthly reports are permanently erased from our active Firestore database.</li>
-        <li>Your user authentication record is deleted.</li>
-    </ul>
-    <p><em>Note: Uninstalling the app from your device does not automatically delete your data or cancel your active subscriptions.</em></p>
-
-    <h2>6. Your Privacy Rights (GDPR, CCPA, and Global Standards)</h2>
-    <p>Depending on your location, you may have the following rights regarding your data:</p>
-    <ul>
-        <li><strong>The right to access:</strong> You can request a copy of your personal data.</li>
-        <li><strong>The right to erasure ("Right to be forgotten"):</strong> You can execute this directly via the in-app deletion tool.</li>
-        <li><strong>The right to restrict processing:</strong> You can opt-out of certain data collections, though this may limit app functionality.</li>
-    </ul>
-
-    <h2>7. Children's Privacy</h2>
-    <p>Lumio is not intended for use by individuals under the age of 13 (or 16 in certain European jurisdictions). We do not knowingly collect personally identifiable information from children. If we discover that a child has provided us with personal information, we will immediately delete it from our servers.</p>
-
-    <h2>8. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy periodically. We will notify you of any significant changes by posting the new policy on this page and updating the "Last Updated" date. Continued use of the app constitutes acceptance of the revised terms.</p>
-
-    <h2>9. Contact Us</h2>
-    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact our Data Protection Officer at: <a href="mailto:support@lumioapp.com">support@lumioapp.com</a></p>
+    <h2>6. Contact Us</h2>
+    <p>If you have any questions regarding your privacy or data, contact us at: <a href="mailto:support@lumioapp.com">support@lumioapp.com</a></p>
 </body>
 </html>

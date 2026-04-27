@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumio | Clarity for your mind.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #000000;
@@ -16,7 +19,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-primary);
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.47059;
@@ -101,6 +104,7 @@
             text-decoration: none;
             display: inline-block;
             transition: transform 0.2s ease, opacity 0.2s ease;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
         .btn-primary:hover {
@@ -143,6 +147,61 @@
             line-height: 1.5;
         }
 
+        /* Screenshots Section */
+        .screenshots-section {
+            text-align: center;
+            padding: 80px 20px 100px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .screenshots-section h2 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin: 0 0 12px 0;
+        }
+
+        .screenshots-section > p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            margin: 0 0 60px 0;
+        }
+
+        .screenshots-grid {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .screenshot-frame {
+            width: 220px;
+            flex-shrink: 0;
+        }
+
+        .screenshot-phone {
+            background-color: var(--surface-color);
+            border: 2px solid var(--border-color);
+            border-radius: 40px;
+            padding: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .screenshot-phone img {
+            width: 100%;
+            border-radius: 30px;
+            display: block;
+        }
+
+        .screenshot-label {
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -158,6 +217,8 @@
             .hero p { font-size: 19px; }
             .navbar { padding: 16px 20px; }
             .features-container { padding: 0 20px 80px; }
+            .screenshots-grid { gap: 16px; }
+            .screenshot-frame { width: 160px; }
         }
     </style>
 </head>
@@ -195,6 +256,37 @@
             <div class="feature-card">
                 <h3>Absolute Privacy</h3>
                 <p>Your entries are processed securely. You maintain full ownership of your data with the right to export or delete your history at any moment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots-section">
+        <h2>See it in action.</h2>
+        <p>Everything you need for a clearer mind, beautifully designed for iPhone.</p>
+        <div class="screenshots-grid">
+            <div class="screenshot-frame">
+                <div class="screenshot-phone">
+                    <img src="screenshots/screenshot-1.png" alt="Lumio App – Journal">
+                </div>
+                <p class="screenshot-label">Journal</p>
+            </div>
+            <div class="screenshot-frame">
+                <div class="screenshot-phone">
+                    <img src="screenshots/screenshot-2.png" alt="Lumio App – Insights">
+                </div>
+                <p class="screenshot-label">Insights</p>
+            </div>
+            <div class="screenshot-frame">
+                <div class="screenshot-phone">
+                    <img src="screenshots/screenshot-3.png" alt="Lumio App – Clarity">
+                </div>
+                <p class="screenshot-label">Clarity</p>
+            </div>
+            <div class="screenshot-frame">
+                <div class="screenshot-phone">
+                    <img src="screenshots/screenshot-4.png" alt="Lumio App – Wellness">
+                </div>
+                <p class="screenshot-label">Wellness</p>
             </div>
         </div>
     </section>

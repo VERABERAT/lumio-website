@@ -5,50 +5,275 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Lumio</title>
     <style>
-        body { background-color: #000000; color: #a1a1aa; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 40px 20px; max-width: 800px; margin: 0 auto; letter-spacing: -0.01em; }
-        h1, h2 { color: #f5f5f7; margin-top: 40px; font-weight: 600; }
-        h1 { font-size: 2.5rem; letter-spacing: -0.03em; }
-        h2 { font-size: 1.5rem; border-bottom: 1px solid #333336; padding-bottom: 10px; }
-        p, li { font-size: 1rem; margin-bottom: 15px; color: #86868b; }
-        a { color: #f5f5f7; text-decoration: none; border-bottom: 1px solid #555; transition: border-color 0.2s; }
-        a:hover { border-bottom-color: #fff; }
-        .back-btn { display: inline-block; margin-bottom: 30px; border: 1px solid #333336; padding: 8px 16px; border-radius: 980px; transition: background 0.2s; border-bottom: none; font-size: 14px; }
-        .back-btn:hover { background: #333336; }
-        strong { color: #d2d2d7; }
+        :root {
+            --bg-color: #000000;
+            --surface-color: #111111;
+            --text-primary: #f5f5f7;
+            --text-secondary: #86868b;
+            --border-color: #333336;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-secondary);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-logo {
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-primary);
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 40px 100px;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            margin: 0 0 8px 0;
+        }
+
+        .effective-date {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin: 0 0 48px 0;
+        }
+
+        h2 {
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 40px 0 12px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0 0 16px 0;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin: 0 0 16px 0;
+        }
+
+        li {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 1px solid #555;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: var(--text-primary);
+        }
+
+        strong {
+            color: #d2d2d7;
+        }
+
+        .highlight-box {
+            border: 1px solid var(--border-color);
+            padding: 24px 28px;
+            border-radius: 16px;
+            background-color: var(--surface-color);
+            margin: 32px 0;
+        }
+
+        .highlight-box h2 {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: var(--text-secondary);
+            border-bottom: none;
+        }
+
+        .footer a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar { padding: 16px 20px; }
+            .content { padding: 40px 20px 80px; }
+            h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-btn">&larr; Back to Home</a>
-    
-    <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> March 2026</p>
 
-    <h2>1. Introduction</h2>
-    <p>Welcome to Lumio. Protecting your privacy is our top priority. This Privacy Policy details how we collect, use, and protect your information, ensuring full compliance with Apple's App Store Review Guidelines regarding user data.</p>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">lumio.</a>
+        <div class="nav-links">
+            <a href="privacy.html" class="active">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="mailto:support@lumioapp.com">Support</a>
+        </div>
+    </nav>
 
-    <h2>2. Data Collection and Usage</h2>
-    <p>We collect minimal data required to provide our journaling and AI analysis services:</p>
-    <ul>
-        <li><strong>Account Information:</strong> We use Firebase Authentication and Apple Sign-In. We collect your email address solely for account creation and recovery.</li>
-        <li><strong>Journal Entries:</strong> The text and mood data you input are processed to generate AI insights.</li>
-        <li><strong>No Advertising Tracking:</strong> We do not track you across other apps or websites. We do not sell, rent, or share your personal data with third-party advertisers or data brokers.</li>
-        <li><strong>Health Data:</strong> Lumio does not integrate with Apple HealthKit and does not read or write any medical data to the Apple Health app.</li>
-    </ul>
+    <main class="content">
 
-    <h2>3. Artificial Intelligence (AI) Processing</h2>
-    <p>Lumio utilizes Google Firebase Vertex AI. Your journal entries are transmitted securely for real-time processing to generate reframes and insights. <strong>Your private entries are never used to train public AI models.</strong> The processing is automated and strictly confidential.</p>
+        <h1>Privacy Policy</h1>
+        <p class="effective-date"><strong>Effective Date:</strong> March 2026</p>
 
-    <h2>4. Third-Party Integrations</h2>
-    <p>To operate the app, we use:</p>
-    <ul>
-        <li><strong>RevenueCat & Apple App Store:</strong> To securely process subscriptions. We never see or store your credit card information.</li>
-        <li><strong>Google Cloud (Firestore):</strong> To securely store your journal entries using industry-standard encryption.</li>
-    </ul>
+        <div class="highlight-box">
+            <h2>Our Core Commitment</h2>
+            <p>Your privacy is the foundation of Lumio. Your journal entries are personal and sensitive. We will never sell, rent, or share your personal data with third-party advertisers or data brokers — period.</p>
+        </div>
 
-    <h2>5. Data Deletion and User Rights</h2>
-    <p>You have the absolute right to control your data. By using the "Delete Account" button within the Lumio app settings, you can instantly and permanently erase all your journal entries, insights, and account data from our servers. Note that deleting the app does not automatically cancel your App Store subscription; this must be managed in your Apple ID settings.</p>
+        <h2>1. Introduction</h2>
+        <p>Welcome to Lumio, developed by Lumio Studio. This Privacy Policy explains how we collect, use, store, protect, and share information about you when you use the Lumio application ("the App"). It is designed to ensure full compliance with Apple's App Store Review Guidelines and applicable data protection laws.</p>
+        <p>By using the App, you agree to the practices described in this Privacy Policy. If you do not agree, please discontinue use and delete your account.</p>
 
-    <h2>6. Contact Us</h2>
-    <p>If you have any questions regarding your privacy or data, contact us at: <a href="mailto:support@lumioapp.com">support@lumioapp.com</a></p>
+        <h2>2. Information We Collect</h2>
+        <p>We collect only the minimum data necessary to provide and improve our services:</p>
+        <ul>
+            <li><strong>Account Information:</strong> We use Firebase Authentication and Apple Sign-In to manage accounts. We collect your email address solely for account creation, authentication, and recovery purposes. We do not collect your full name, phone number, or address unless you voluntarily provide them for support purposes.</li>
+            <li><strong>Journal Entries &amp; Mood Data:</strong> The text, mood tags, and emotional ratings you input are processed to generate AI insights. This is the core data that powers the Lumio experience.</li>
+            <li><strong>Usage Data:</strong> We collect anonymized, aggregated usage analytics (e.g., which features are used most frequently) to improve the App. This data cannot be used to identify you personally.</li>
+            <li><strong>Device Information:</strong> We may collect basic device information (e.g., iOS version, device model) for debugging and compatibility purposes. This information is not linked to your identity.</li>
+        </ul>
+
+        <h2>3. Information We Do NOT Collect</h2>
+        <ul>
+            <li><strong>No Advertising Tracking:</strong> We do not track you across other apps or websites for advertising purposes. Our App does not use any advertising SDKs or third-party tracking frameworks.</li>
+            <li><strong>No Health Data:</strong> Lumio does not integrate with Apple HealthKit and does not read or write any medical data to the Apple Health app.</li>
+            <li><strong>No Precise Location:</strong> We do not request or collect your precise GPS location.</li>
+            <li><strong>No Payment Data:</strong> All subscription billing is handled entirely by Apple. We never see, store, or have access to your credit card or banking information.</li>
+        </ul>
+
+        <h2>4. How We Use Your Information</h2>
+        <p>Your data is used exclusively for the following purposes:</p>
+        <ul>
+            <li>Providing and personalizing the core features of the App, including AI-generated reframes and mood insights.</li>
+            <li>Authenticating your account and ensuring its security.</li>
+            <li>Processing your subscription status via RevenueCat.</li>
+            <li>Responding to your support requests.</li>
+            <li>Improving the App through anonymized, aggregated analytics.</li>
+            <li>Complying with legal obligations.</li>
+        </ul>
+
+        <h2>5. Artificial Intelligence (AI) Processing</h2>
+        <p>Lumio utilizes <strong>Google Firebase Vertex AI</strong> to power its journaling analysis features. When you submit a journal entry for analysis, the text is transmitted securely to Google's AI infrastructure for real-time processing.</p>
+        <p><strong>Your private journal entries are never used to train public AI models.</strong> All AI processing is automated, confidential, and subject to Google's enterprise data processing agreements. Processed entries are not stored by the AI service beyond the immediate request.</p>
+
+        <h2>6. Third-Party Services</h2>
+        <p>To operate the App, we work with a small number of trusted third-party providers. Each service is bound by its own privacy policy and data processing agreements:</p>
+        <ul>
+            <li><strong>Google Firebase (Authentication &amp; Firestore):</strong> Used for account management and secure, encrypted cloud storage of your journal entries. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>.</li>
+            <li><strong>Google Firebase Vertex AI:</strong> Used for real-time AI analysis of journal entries. <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank">Google Cloud DPA</a>.</li>
+            <li><strong>RevenueCat:</strong> Used to securely manage and validate App Store subscription status. RevenueCat does not have access to your journal content. <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.</li>
+            <li><strong>Apple App Store:</strong> All in-app purchases and subscriptions are processed by Apple under their privacy framework.</li>
+        </ul>
+
+        <h2>7. Data Storage and Security</h2>
+        <p>Your journal entries and account data are stored in Google Cloud Firestore with industry-standard encryption at rest (AES-256) and in transit (TLS). Access to your data is strictly limited to authenticated requests from your own account.</p>
+        <p>We implement appropriate technical and organizational security measures to protect your data. However, no system is completely secure. We encourage you to use a strong device passcode and enable Face ID or Touch ID to protect access to the App on your device.</p>
+
+        <h2>8. Data Retention</h2>
+        <p>We retain your account and journal data for as long as your account is active or as needed to provide services. If you delete your account, all your data is permanently erased from our servers within 30 days. Anonymized, aggregated analytics data (which cannot identify you) may be retained indefinitely for product improvement purposes.</p>
+
+        <h2>9. Your Rights and Data Deletion</h2>
+        <p>You have full control over your personal data. You may exercise the following rights at any time:</p>
+        <ul>
+            <li><strong>Access &amp; Export:</strong> You may request a copy of your personal data by contacting us at <a href="mailto:support@lumioapp.com">support@lumioapp.com</a>.</li>
+            <li><strong>Correction:</strong> You may update your account information directly within the App settings.</li>
+            <li><strong>Deletion:</strong> By using the <strong>"Delete Account"</strong> button within the Lumio app settings, you can instantly and permanently erase all your journal entries, insights, and account data from our servers. This action is irreversible.</li>
+            <li><strong>Subscription Cancellation:</strong> Note that deleting the App or your account does not automatically cancel your App Store subscription. Subscription management must be done through your Apple ID settings.</li>
+        </ul>
+
+        <h2>10. Children's Privacy</h2>
+        <p>Lumio is not directed at children under the age of 17. We do not knowingly collect personal information from children under 17. If we become aware that we have collected data from a child under 17, we will take steps to delete that information promptly. If you believe we have inadvertently collected such information, please contact us immediately.</p>
+
+        <h2>11. International Data Transfers</h2>
+        <p>Your data may be processed and stored on Google Cloud servers located outside your country of residence. By using the App, you consent to the transfer of your data to these servers. We ensure that all such transfers comply with applicable data protection laws through appropriate safeguards, including data processing agreements with our service providers.</p>
+
+        <h2>12. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. When we make material changes, we will update the effective date at the top of this page and provide notice within the App where required. We encourage you to review this policy periodically.</p>
+
+        <h2>13. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding your privacy or this policy, please contact us at:</p>
+        <p><a href="mailto:support@lumioapp.com">support@lumioapp.com</a></p>
+
+    </main>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2026 Lumio Studio. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
 </body>
 </html>

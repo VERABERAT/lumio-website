@@ -5,50 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service | Lumio</title>
     <style>
-        body { background-color: #000000; color: #a1a1aa; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 40px 20px; max-width: 800px; margin: 0 auto; letter-spacing: -0.01em; }
-        h1, h2 { color: #f5f5f7; margin-top: 40px; font-weight: 600; }
-        h1 { font-size: 2.5rem; letter-spacing: -0.03em; }
-        h2 { font-size: 1.5rem; border-bottom: 1px solid #333336; padding-bottom: 10px; }
-        p, li { font-size: 1rem; margin-bottom: 15px; color: #86868b; }
-        a { color: #f5f5f7; text-decoration: none; border-bottom: 1px solid #555; transition: border-color 0.2s; }
-        a:hover { border-bottom-color: #fff; }
-        .back-btn { display: inline-block; margin-bottom: 30px; border: 1px solid #333336; padding: 8px 16px; border-radius: 980px; transition: background 0.2s; border-bottom: none; font-size: 14px; }
-        .back-btn:hover { background: #333336; }
-        strong { color: #d2d2d7; }
-        .warning-box { border: 1px solid #444; padding: 20px; border-radius: 16px; background-color: #111; margin-top: 25px; margin-bottom: 25px; }
-        .warning-box h2 { color: #f5f5f7; border-bottom: none; padding-bottom: 0; margin-top: 0; }
-        .warning-box p { color: #a1a1aa; margin-bottom: 0; }
+        :root {
+            --bg-color: #000000;
+            --surface-color: #111111;
+            --text-primary: #f5f5f7;
+            --text-secondary: #86868b;
+            --border-color: #333336;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-secondary);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-logo {
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-primary);
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 40px 100px;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            margin: 0 0 8px 0;
+        }
+
+        .effective-date {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin: 0 0 48px 0;
+        }
+
+        h2 {
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 40px 0 12px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0 0 16px 0;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin: 0 0 16px 0;
+        }
+
+        li {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 1px solid #555;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: var(--text-primary);
+        }
+
+        strong {
+            color: #d2d2d7;
+        }
+
+        .warning-box {
+            border: 1px solid #444;
+            padding: 24px 28px;
+            border-radius: 16px;
+            background-color: var(--surface-color);
+            margin: 32px 0;
+        }
+
+        .warning-box h2 {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .warning-box p {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: var(--text-secondary);
+            border-bottom: none;
+        }
+
+        .footer a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar { padding: 16px 20px; }
+            .content { padding: 40px 20px 80px; }
+            h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-btn">&larr; Back to Home</a>
-    
-    <h1>Terms of Service</h1>
-    <p><strong>Effective Date:</strong> March 2026</p>
 
-    <h2>1. Acceptance of Terms & Apple EULA</h2>
-    <p>By downloading, installing, or using the Lumio application ("the App"), you agree to be bound by these Terms of Service. Furthermore, your use of the App is subject to the standard <strong>Apple Licensed Application End User License Agreement (EULA)</strong>. By using Lumio, you explicitly agree to the terms outlined in the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standard EULA</a>.</p>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">lumio.</a>
+        <div class="nav-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html" class="active">Terms</a>
+            <a href="mailto:support@lumioapp.com">Support</a>
+        </div>
+    </nav>
 
-    <div class="warning-box">
-        <h2>2. Medical Disclaimer (CRITICAL)</h2>
-        <p><strong>LUMIO IS NOT A HEALTHCARE PROVIDER OR MEDICAL DEVICE.</strong> The AI-generated insights, reframes, and mood tracking are for self-reflection purposes only and do not constitute professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for mental health concerns.</p>
-    </div>
+    <main class="content">
 
-    <h2>3. Auto-Renewable Subscriptions (App Store Rules)</h2>
-    <p>Lumio offers an optional "Lumio Pro" subscription for advanced AI insights. The following terms apply to all Apple App Store subscriptions:</p>
-    <ul>
-        <li>Payment will be charged to your Apple ID account at confirmation of purchase.</li>
-        <li>Your subscription will automatically renew unless auto-renew is turned off at least 24 hours before the end of the current billing period.</li>
-        <li>Your account will be charged for renewal within 24 hours prior to the end of the current period, identifying the cost of the renewal.</li>
-        <li>You can manage your subscriptions and turn off auto-renewal by going to your App Store Account Settings after purchase.</li>
-        <li>Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription.</li>
-    </ul>
+        <h1>Terms of Service</h1>
+        <p class="effective-date"><strong>Effective Date:</strong> March 2026</p>
 
-    <h2>4. Acceptable Use</h2>
-    <p>You agree to use the App only for lawful purposes. You are prohibited from attempting to reverse-engineer the app, misuse the AI capabilities, or input content that is illegal or highly abusive.</p>
-<h2>5. Governing Law and Dispute Resolution</h2>
-    <p>These Terms shall be governed by and construed in accordance with the laws of the Republic of Turkey. Any legal disputes or claims arising out of or in connection with your use of Lumio shall be subject to the exclusive jurisdiction of the courts located in Istanbul, Turkey.</p>
-    <h2>5. Contact Information</h2>
-    <p>For support or inquiries, please contact us at: <a href="mailto:support@lumioapp.com">support@lumioapp.com</a></p>
+        <h2>1. Acceptance of Terms &amp; Apple EULA</h2>
+        <p>By downloading, installing, or using the Lumio application ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App. We reserve the right to update these Terms at any time; continued use of the App following any changes constitutes acceptance of the revised Terms.</p>
+        <p>Your use of the App is also subject to the standard <strong>Apple Licensed Application End User License Agreement (EULA)</strong>. By using Lumio, you explicitly agree to the terms outlined in the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standard EULA</a>. In the event of any conflict between these Terms and the Apple EULA, the Apple EULA shall govern with respect to Apple-specific matters.</p>
+
+        <div class="warning-box">
+            <h2>2. Medical Disclaimer (Critical)</h2>
+            <p><strong>LUMIO IS NOT A HEALTHCARE PROVIDER, THERAPIST, OR MEDICAL DEVICE.</strong> The AI-generated insights, reframes, and mood tracking features are strictly for personal self-reflection and informational purposes only. They do not constitute professional medical advice, psychological diagnosis, or treatment of any kind. If you are experiencing a mental health crisis or emergency, please contact a qualified healthcare professional or emergency services immediately. Never disregard professional medical advice or delay seeking it because of something you read or experienced within this App.</p>
+        </div>
+
+        <h2>3. Eligibility</h2>
+        <p>You must be at least 17 years of age to use Lumio, in accordance with App Store age rating requirements. By using the App, you represent and warrant that you meet this age requirement. If you are under the age of majority in your jurisdiction, you must have the consent of a parent or legal guardian.</p>
+
+        <h2>4. User Account</h2>
+        <p>To access certain features, you must create an account using Apple Sign-In or an email address. You are responsible for maintaining the confidentiality of your account credentials. You agree to notify us immediately at <a href="mailto:support@lumioapp.com">support@lumioapp.com</a> of any unauthorized use of your account. Lumio Studio will not be liable for any loss resulting from unauthorized use of your account.</p>
+
+        <h2>5. Auto-Renewable Subscriptions (App Store Rules)</h2>
+        <p>Lumio offers an optional "Lumio Pro" subscription providing access to advanced AI insights and features. The following terms apply to all Apple App Store subscriptions:</p>
+        <ul>
+            <li>Payment will be charged to your Apple ID account at confirmation of purchase.</li>
+            <li>Your subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current billing period.</li>
+            <li>Your account will be charged for renewal within 24 hours prior to the end of the current period at the cost displayed at time of purchase.</li>
+            <li>You can manage your subscriptions and turn off auto-renewal by going to your App Store Account Settings after purchase.</li>
+            <li>Any unused portion of a free trial period, if offered, will be forfeited when a subscription is purchased before the trial ends.</li>
+            <li>Lumio Studio does not offer refunds for partially used subscription periods. All billing disputes must be directed to Apple.</li>
+        </ul>
+
+        <h2>6. Acceptable Use</h2>
+        <p>You agree to use the App only for lawful, personal, and non-commercial purposes. The following actions are strictly prohibited:</p>
+        <ul>
+            <li>Attempting to reverse-engineer, decompile, or disassemble any part of the App.</li>
+            <li>Misusing or attempting to manipulate the AI capabilities for harmful or deceptive purposes.</li>
+            <li>Inputting content that is illegal, defamatory, hateful, or abusive.</li>
+            <li>Attempting to gain unauthorized access to the App's backend systems or other users' data.</li>
+            <li>Using the App to harass, threaten, or harm any individual or group.</li>
+            <li>Violating any applicable local, national, or international laws or regulations.</li>
+        </ul>
+
+        <h2>7. Intellectual Property</h2>
+        <p>All content within the App — including but not limited to text, graphics, interface design, AI models, and software — is the exclusive property of Lumio Studio and is protected by applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to use the App solely for your personal use in accordance with these Terms.</p>
+        <p>Your journal entries and personal data remain entirely your own. You grant Lumio Studio only the limited rights necessary to provide the service (e.g., processing entries for AI analysis). We will never claim ownership of your content.</p>
+
+        <h2>8. Disclaimer of Warranties</h2>
+        <p>The App is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, either express or implied. Lumio Studio does not warrant that the App will be uninterrupted, error-free, or free of viruses. We make no warranty regarding the accuracy or reliability of any AI-generated insights.</p>
+
+        <h2>9. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, Lumio Studio and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages — including loss of data, loss of profits, or emotional distress — arising from your use of or inability to use the App, even if we have been advised of the possibility of such damages.</p>
+
+        <h2>10. Termination</h2>
+        <p>We reserve the right to suspend or terminate your access to the App at our sole discretion, without notice, for conduct that we determine violates these Terms or is harmful to other users, Lumio Studio, third parties, or for any other reason. Upon termination, your right to use the App ceases immediately. You may delete your account at any time from within the App settings.</p>
+
+        <h2>11. Governing Law and Dispute Resolution</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the Republic of Turkey, without regard to conflict of law principles. Any legal disputes or claims arising out of or in connection with your use of Lumio shall be subject to the exclusive jurisdiction of the courts located in Istanbul, Turkey. You waive any objection to the laying of venue of any such proceeding in Istanbul, Turkey.</p>
+
+        <h2>12. Changes to These Terms</h2>
+        <p>Lumio Studio reserves the right to modify these Terms at any time. When we make material changes, we will update the effective date at the top of this page and, where appropriate, notify users via in-app notice. Your continued use of the App after any changes take effect constitutes your acceptance of the new Terms.</p>
+
+        <h2>13. Contact Information</h2>
+        <p>If you have any questions, concerns, or feedback regarding these Terms, please contact us at: <a href="mailto:support@lumioapp.com">support@lumioapp.com</a></p>
+
+    </main>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2026 Lumio Studio. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
 </body>
 </html>
